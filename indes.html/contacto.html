@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Pastelería Artesanal</title>
+         <link rel="icon" href="Diseño sin título.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff6f8;
+        }
+        header {
+            background-color: #f8d0d8;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            width: 80px;
+            vertical-align: middle;
+        }
+        header h1 {
+            display: inline-block;
+            margin-left: 15px;
+            color: #b30059;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            gap: 40px;
+        }
+        .info, .formulario {
+            width: 48%;
+        }
+        .info h2, .formulario h2 {
+            color: #b30059;
+            margin-bottom: 20px;
+        }
+        .info p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #b30059;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #f8d0d8;
+            padding: 10px;
+            text-align: center;
+            color: #b30059;
+        }
+  .frase-caja {
+    background-color: #fff0f5;
+    border: 2px solid #f472b6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(244, 114, 182, 0.2);
+    text-align: center;
+    color: #be185d;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 40px auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .frase-caja.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .oculto {
+    opacity: 0;
+  }
+</style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Diseño sin título.png" alt="Logo de la pastelería">
+        <h1>Pastelería Artesanal</h1>
+    </header>
+    <div style="background-color: #fff0f5; border: 2px solid #f472b6; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(244, 114, 182, 0.2); text-align: center; color: #be185d; font-size: 1.2rem; max-width: 700px; margin: 40px auto;">
+  ✨ <strong style="color: #db2777;">Nos encanta escucharte.</strong><br>
+  Ya sea para un pedido, una sugerencia o simplemente saludarnos,<br>
+  <span style="color: #ec4899;">¡estamos siempre para vos!</span>
+</div>
+  <p id="errorMsg" class="text-red-600 mt-2 hidden"></p>
+  <!-- Horario de atención -->
+  <section class="mt-10 text-center text-pink-700 font-semibold text-lg">
+    <div style="background-color: #fff0f5; border: 2px solid #f472b6; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(244, 114, 182, 0.2); text-align: center; color: #be185d; font-size: 1.2rem; max-width: 700px; margin: 40px auto;">
+  ✨ <strong style="color: #db2777;">    <h3 class="mb-2">Horario de Atención</h3>
+    <p>Lunes a Viernes: 9:00 am - 7:00 pm</p>
+    <p>Sábados: 10:00 am - 3:00 pm</p>
+    <p>Domingos y feriados cerrado</p>.</strong><br>
+  <!-- Botón para agendar citas o pedidos -->
+  <div class="text-center mt-8">
+    <a href="https://calendly.com/tuUsuario" target="_blank" 
+       class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded shadow transition-colors duration-300">
+      📅 Agendar Cita o Pedido Especial
+    </a>
+  </div>
+</section>
+
+<style>
+  .contact-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+  }
+
+  .contact-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+</style>
+    <div class="container">
+        <div class="info">
+            <h2>Información de contacto</h2>
+            <p>📧 Gmail: pasteleriaartesanal@gmail.com</p>
+            <p>📞 Teléfono: +54 261-2515695</p>
+            <p>📸 Instagram: @Ilove_cakemdz</p>
+        </div>
+
+        <div class="formulario">
+            <h2>Formulario de contacto</h2>
+            <form>
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
+                <input type="text" name="ubicacion" placeholder="Ubicación">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="tel" name="telefono" placeholder="Teléfono">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+ 
+<section class="bg-pink-50 p-6 rounded-lg mt-10 shadow">
+  <h3 class="text-xl font-bold text-pink-700 mb-3">🧁 Pedido especial</h3>
+  <form class="grid gap-4">
+    <input type="text" placeholder="Nombre completo" class="border border-pink-300 px-4 py-2 rounded">
+    <input type="email" placeholder="Correo electrónico" class="border border-pink-300 px-4 py-2 rounded">
+    <textarea placeholder="Contanos tu idea, evento o pedido personalizado..." rows="4" class="border border-pink-300 px-4 py-2 rounded"></textarea>
+    <button class="bg-pink-600 hover:bg-pink-700 text-white px-5 py-2 rounded-lg font-semibold">Enviar</button>
+  </form>
+</section>
+<a class="volver" href="indes.html">volver al inicio</a>
+    <footer>
+        © 2025 Pastelería Artesanal - Todos los derechos reservados
+    </footer>
+</body>
+</html>

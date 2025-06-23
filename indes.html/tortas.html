@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+       <link rel="icon" href="Diseño sin título.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <title>Tortas - Pastelería Artesanal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff6f8;
+    }
+    header, footer {
+      background-color: #f8d0d8;
+      padding: 20px;
+      text-align: center;
+      color: #b30059;
+    }
+    header img {
+      width: 80px;
+      vertical-align: middle;
+    }
+    header h1 {
+      display: inline-block;
+      margin-left: 15px;
+    }
+    .main {
+      display: flex;
+      padding: 20px;
+    }
+    .filtro {
+      width: 25%;
+      padding: 20px;
+      background-color: #ffe6ec;
+      border-radius: 10px;
+    }
+    .filtro h2 {
+      color: #b30059;
+      margin-bottom: 10px;
+    }
+    .filtro label {
+      display: block;
+      margin: 8px 0 4px;
+      font-weight: bold;
+    }
+    .filtro select {
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    .productos {
+      width: 75%;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .producto {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .producto p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  .torta-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .torta-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 192, 203, 0.4);
+  }
+</style>
+  </style>
+</head>
+<body>
+  <header>
+    
+    <img src="Diseño sin título.png" alt="Logo Pastelería" />
+    <h1>Pastelería Artesanal</h1>
+    <div class="bg-yellow-100 text-yellow-800 p-4 rounded-lg shadow my-6 text-center font-medium">
+  🧡 Llevá 2 tartas o más y obtené un <span class="font-bold text-yellow-900">10% de descuento</span> automático.
+</div>
+<div class="bg-pink-100 border-l-4 border-pink-500 p-4 my-8 rounded-lg text-pink-700 font-semibold text-center">
+  🌸 ¡Tortas de temporada! Probá nuestras opciones con frutos rojos, mousse de maracuyá o crema pastelera.
+</div>
+
+  </header>
+  
+
+  <div class="main">
+    <div class="filtro">
+      <h2>Filtrar tortas</h2>
+      <label for="sabor">Sabor</label>
+      <select id="sabor">
+        <option>Chocolate</option>
+        <option>Vainilla</option>
+        <option>Frutilla</option>
+        <option>Limón</option>
+         <option>maracuya</option>
+          <option>frutos rojos</option>
+           <option>dulce de leche</option>
+            <option>coco</option>
+             <option>cafe</option>
+              <option>chocolate blanco</option>
+               <option>zanahoria</option>
+                <option>tres leches</option>
+      </select>
+
+      <label for="tamano">Tamaño</label>
+      <select id="tamano">
+        <option>Chica</option>
+        <option>Mediana</option>
+        <option>Grande</option>
+         <option>shots</option>
+          <option>porciones</option>
+      </select>
+
+      <label for="tiempo">Anticipación</label>
+      <select id="tiempo">
+        <option>24h</option>
+        <option>48h</option>
+        <option>72h</option>
+      </select>
+
+      <label for="precio">Precio</label>
+      <select id="precio">
+        <option>- $3000</option>
+        <option>$3000–$5000</option>
+        <option>+ $5000</option>
+      </select>
+      <aside class="bg-pink-50 p-4 rounded-md shadow text-sm">
+  <h3 class="text-pink-700 font-bold text-lg mb-4">Filtrar productos</h3>
+
+  <!-- Categoría si la usás -->
+  <!-- <div class="mb-4">
+    <label class="block font-semibold mb-1">Categoría</label>
+    <select class="w-full border border-pink-300 rounded px-2 py-1">
+      <option>Todas</option>
+      <option>Tortas</option>
+      <option>Tartas</option>
+      <option>Alfajores</option>
+    </select>
+  </div> -->
+
+  <!-- Ingredientes -->
+  <div class="mb-4">
+    <label class="block font-semibold mb-1">Ingredientes</label>
+    <select id="filtro-ingrediente" class="w-full border border-pink-300 rounded px-2 py-1">
+      <option value="">Todos</option>
+      <option value="chocolate">Chocolate</option>
+      <option value="dulce-de-leche">Dulce de leche</option>
+      <option value="frutas">Frutas</option>
+      <option value="vainilla">Vainilla</option>
+    </select>
+  </div>
+
+  <!-- Dieta -->
+  <div class="mb-4">
+    <label class="block font-semibold mb-1">Dieta</label>
+    <select id="filtro-dieta" class="w-full border border-pink-300 rounded px-2 py-1">
+      <option value="">Todas</option>
+      <option value="vegano">Vegano</option>
+      <option value="sin-tacc">Sin TACC</option>
+      <option value="sin-azúcar">Sin azúcar</option>
+    </select>
+  </div>
+
+  <!-- Precio -->
+  <div class="mb-4">
+    <label class="block font-semibold mb-1">Precio máximo</label>
+    <input type="number" id="filtro-precio" class="w-full border border-pink-300 rounded px-2 py-1" placeholder="$">
+  </div>
+
+  <button onclick="filtrarProductos()" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded">
+    Aplicar filtros
+  </button>
+</aside>
+
+    </div>
+
+    
+
+    <div class="productos">
+      <div class="producto">
+       <img src="torta1.jpg" alt="Torta especial" class="torta-hover rounded-lg shadow-md">
+        <p>Torta de Chocolate</p>
+        <p>$4200</p>
+                <button>Agregar al carrito</button>
+
+      </div>
+      <div class="producto">
+        <img src="torta2.jpg" alt="Torta de Frutilla" />
+        <p>Torta de Frutilla</p>
+                <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta3.jpg" alt="Torta de Limón" />
+        <p>Torta de Limón</p>
+                <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta4.jpg" alt="Torta Vainilla" />
+        <p>Torta Vainilla</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta5.jpg" alt="Torta Vainilla" />
+        <p>Torta tres leches</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta6.jpg" alt="Torta Vainilla" />
+        <p>Torta de café y chocolate</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta7.jpg" alt="Torta Vainilla" />
+        <p>Torta de mousse de maracuyá</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta8.jpg" alt="Torta Vainilla" />
+        <p>Torta Red Velvet</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta9.jpg" alt="Torta Vainilla" />
+        <p>Torta de coco y dulce de leche</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta10.jpg" alt="Torta Vainilla" />
+        <p>Torta de limón con amapolas</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta11.jpg" alt="Torta Vainilla" />
+        <p>Torta de mousse de frutilla</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta12.jpg" alt="Torta Vainilla" />
+        <p>Torta de zanahoria con frosting de queso</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta13.jpg" alt="Torta Vainilla" />
+        <p>Torta de mousse de chocolate blanco y frutos rojoss</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="torta14.jpg" alt="Torta Vainilla" />
+        <p>Torta de tiramisú</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      
+    </div>
+    
+  </div>
+  
+<a class="volver" href="indes.html">volver a la pagina principal</a>
+<header>
+    <img src="Diseño sin título.png" alt="Logo Pastelería" />
+    <h1>Pastelería Artesanal</h1>
+  </header>
+  <footer>
+    © 2025 Pastelería Artesanal - Todos los derechos reservados
+  </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.titulo-pasteleria {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: #db2777;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(255, 192, 203, 0.4);
+  letter-spacing: 2px;
+  transition: transform 0.3s ease;
+}
+
+body {
+  background-image: url('textura-marmol.jpg'); /* Reemplazá con tu imagen */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.encabezado-elegante {
+  text-align: center;
+  margin: 50px 0 30px;
+  color: #a21caf;
+}
+
+.encabezado-elegante h1 {
+  font-size: 2.5rem;
+  color: #db2777;
+  font-family: 'Georgia', serif;
+  margin-bottom: 10px;
+}
+
+.encabezado-elegante .subtitulo {
+  font-size: 1.2rem;
+  color: #6b2d5c;
+  font-style: italic;
+}
+.polaroid {
+  background: #fff;
+  padding: 10px 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #f3d1dc;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.polaroid .caption {
+  font-size: 1rem;
+  color: #d63384;
+  font-weight: bold;
+}
