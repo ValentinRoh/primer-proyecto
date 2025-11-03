@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff8f9;
+  color: #4a044e;
+}
+
+/* Encabezado */
+.encabezado {
+  background: #f3c5b8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.logo { height: 70px; }
+.titulo {
+  font-family: 'Great Vibes', cursive;
+  color: #db2777;
+  font-size: 2.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  background: #d98e73;
+  padding: 10px;
+}
+.menu a {
+  color: white;
+  font-weight: bold;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.menu a:hover { background: #c5765c; padding: 5px 10px; border-radius: 10px; }
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px auto;
+}
+
+.producto {
+  background: #fff;
+  border: 2px solid #f9a8d4;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(244, 114, 182, 0.2);
+  transition: transform 0.3s ease;
+}
+.producto:hover { transform: translateY(-5px); }
+.producto img { width: 100%; border-radius: 10px; }
+
+button {
+  background-color: #f9a8d4;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover { background-color: #db2777; }
+
+/* Carrito */
+.carrito-btn {
+  background: #db2777;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  padding: 6px 14px;
+}
+#contador {
+  background: white;
+  color: #db2777;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.carrito-panel {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background: #fff0f5;
+  border-left: 3px solid #db2777;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: right 0.4s ease;
+  overflow-y: auto;
+}
+.carrito-panel.visible { right: 0; }
